@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OptiCrop - Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        .topnav { background-color: #2e7d32; overflow: hidden; }
+        .topnav a { float: left; color: white; padding: 14px 16px; text-decoration: none; font-size: 17px; }
+        .topnav a:hover, .topnav a.active { background-color: #1b5e20; }
+        .hero {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Minecraft_crop_field.jpg/1280px-Minecraft_crop_field.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-text {
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .hero-text h1 { font-size: 48px; color: #a5d6a7; }
+        .content { padding: 30px; background-color: #f1f8e9; }
+        h2 { color: #2e7d32; }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('findyourcrop') }}">FindYourCrop</a>
+    </div>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>opti-crop</h1>
+            <p style="font-size:18px;">Smart Agricultural Production Optimization Engine</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Opti Crop Agricultural Optimisation</h2>
+        <p>The main purpose of the OptiCrop aims to develop an advanced software system
+        that utilizes data-driven insights to optimize agricultural production for different crops.
+        By integrating key environmental factors such as Nitrogen (N), Phosphorous (P),
+        Potassium (K) levels, soil temperature, humidity, pH, rainfall, and crop types,
+        Opti Crop seeks to provide intelligent recommendations to farmers for maximizing
+        yields and resource efficiency.</p>
+    </div>
+</body>
+</html>

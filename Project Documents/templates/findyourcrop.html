@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Your Crop - OptiCrop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        .topnav { background-color: #2e7d32; overflow: hidden; }
+        .topnav a { float: left; color: white; padding: 14px 16px; text-decoration: none; font-size: 17px; }
+        .topnav a:hover { background-color: #1b5e20; }
+        .hero-form {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Soybean_fieldUSDA.jpg/1280px-Soybean_fieldUSDA.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-box {
+            background-color: rgba(0,0,0,0.65);
+            padding: 30px 40px;
+            border-radius: 10px;
+            color: white;
+            width: 380px;
+        }
+        .form-box h2 {
+            color: yellow;
+            text-align: center;
+            background-color: #ccff00;
+            color: red;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .form-box label { color: white; font-weight: bold; }
+        .form-box input { width: 100%; margin-bottom: 8px; padding: 6px; border-radius: 4px; border: none; color: #000000; background-color: #ffffff; }
+        .btn-predict {
+            background-color: #1565c0;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result-bar {
+            background-color: #212121;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('findyourcrop') }}">FindYourCrop</a>
+    </div>
+
+    <div class="hero-form">
+        <div class="form-box">
+            <h2>Find Your Best Crop Here</h2>
+            <p style="text-align:center; color:#ccc;">Please enter the conditions</p>
+            <form action="{{ url_for('predict') }}" method="post">
+                <label>Nitrogen:</label>
+                <input type="text" name="nitrogen" placeholder="nitrogen" required/>
+                <label>Phosphorous:</label>
+                <input type="text" name="phosphorous" placeholder="phosphorous" required/>
+                <label>Potassium:</label>
+                <input type="text" name="potassium" placeholder="potassium" required/>
+                <label>Temperature:</label>
+                <input type="text" name="temperature" placeholder="temperature" required/>
+                <label>Humidity:</label>
+                <input type="text" name="humidity" placeholder="humidity" required/>
+                <label>PH:</label>
+                <input type="text" name="ph" placeholder="ph" required/>
+                <label>Rainfall:</label>
+                <input type="text" name="rainfall" placeholder="rainfall" required/>
+                <br>
+                <button type="submit" class="btn-predict">Predict</button>
+            </form>
+        </div>
+    </div>
+
+    {% if prediction_text %}
+    <div class="result-bar">
+        {{ prediction_text }}
+    </div>
+{% endif %}
+</body>
+</html>

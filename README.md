@@ -126,7 +126,6 @@ Enter the required soil parameters such as Nitrogen (N), Phosphorus (P), Potassi
   - **analysis.ipynb** : Jupyter Notebook for data analysis and model experimentation.
   - **templates/** : Contains HTML templates for the user interface.
   - **anaconda_projects/** : Project-related resources and supporting files.
-```text
 
 ## 🎥 Project Demonstration
 

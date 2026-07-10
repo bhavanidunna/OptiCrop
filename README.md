@@ -127,5 +127,12 @@ Enter the required soil parameters such as Nitrogen (N), Phosphorus (P), Potassi
   - **templates/** : Contains HTML templates for the user interface.
   - **anaconda_projects/** : Project-related resources and supporting files.
 ```text
+
+## 🎥 Project Demonstration
+
+Watch the complete demonstration of the **OptiCrop – Smart Agricultural Production Optimization Engine** by clicking the link below.
+
+🎬 **Demo Video:**  
+[Watch Demo Video](https://drive.google.com/file/d/14Dg9cxWggnY43jll1HH1s_fY8jILjt6e/view?usp=sharing)
 http://127.0.0.1:5000
 ```
